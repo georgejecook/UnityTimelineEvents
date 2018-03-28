@@ -33,8 +33,6 @@ MonoBehaviour:
   m_Name: TimelineEventClip
   m_EditorClassIdentifier: 
   template:
-    ClipStartTime: 0
-    ClipEndTime: 0
     HandlerKey: Tantawowa.Demo.DemoScripts.Robot.AddScore
     IsMethodWithParam: 1
     InvokeEventsInEditMode: 1
@@ -52,8 +50,6 @@ MonoBehaviour:
   m_Name: TimelineEventClip
   m_EditorClassIdentifier: 
   template:
-    ClipStartTime: 0
-    ClipEndTime: 0
     HandlerKey: Tantawowa.Demo.DemoScripts.UIManager.ToggleLight
     IsMethodWithParam: 1
     InvokeEventsInEditMode: 1
@@ -71,8 +67,6 @@ MonoBehaviour:
   m_Name: TimelineEventClip
   m_EditorClassIdentifier: 
   template:
-    ClipStartTime: 0
-    ClipEndTime: 0
     HandlerKey: Tantawowa.Demo.DemoScripts.Robot.AddScore
     IsMethodWithParam: 1
     InvokeEventsInEditMode: 1
@@ -90,8 +84,6 @@ MonoBehaviour:
   m_Name: TimelineEventClip
   m_EditorClassIdentifier: 
   template:
-    ClipStartTime: 0
-    ClipEndTime: 0
     HandlerKey: Tantawowa.Demo.DemoScripts.UIManager.ToggleLight
     IsMethodWithParam: 1
     InvokeEventsInEditMode: 1
@@ -109,8 +101,6 @@ MonoBehaviour:
   m_Name: TimelineEventClip
   m_EditorClassIdentifier: 
   template:
-    ClipStartTime: 0
-    ClipEndTime: 0
     HandlerKey: Tantawowa.Demo.DemoScripts.UIManager.ChangeUI
     IsMethodWithParam: 1
     InvokeEventsInEditMode: 1
@@ -128,8 +118,6 @@ MonoBehaviour:
   m_Name: TimelineEventClip
   m_EditorClassIdentifier: 
   template:
-    ClipStartTime: 0
-    ClipEndTime: 0
     HandlerKey: Tantawowa.Demo.DemoScripts.Robot.SetState
     IsMethodWithParam: 1
     InvokeEventsInEditMode: 0
@@ -147,8 +135,6 @@ MonoBehaviour:
   m_Name: TimelineEventClip
   m_EditorClassIdentifier: 
   template:
-    ClipStartTime: 0
-    ClipEndTime: 0
     HandlerKey: Tantawowa.Demo.DemoScripts.Robot.AddScore
     IsMethodWithParam: 1
     InvokeEventsInEditMode: 1
@@ -166,8 +152,6 @@ MonoBehaviour:
   m_Name: TimelineEventClip
   m_EditorClassIdentifier: 
   template:
-    ClipStartTime: 0
-    ClipEndTime: 0
     HandlerKey: Tantawowa.Demo.DemoScripts.Robot.SetState
     IsMethodWithParam: 1
     InvokeEventsInEditMode: 0
@@ -185,8 +169,6 @@ MonoBehaviour:
   m_Name: TimelineEventClip
   m_EditorClassIdentifier: 
   template:
-    ClipStartTime: 0
-    ClipEndTime: 0
     HandlerKey: Tantawowa.Demo.DemoScripts.Robot.SetState
     IsMethodWithParam: 1
     InvokeEventsInEditMode: 0
@@ -204,8 +186,6 @@ MonoBehaviour:
   m_Name: TimelineEventClip
   m_EditorClassIdentifier: 
   template:
-    ClipStartTime: 0
-    ClipEndTime: 0
     HandlerKey: Tantawowa.Demo.DemoScripts.UIManager.ChangeUI
     IsMethodWithParam: 1
     InvokeEventsInEditMode: 1
@@ -223,8 +203,6 @@ MonoBehaviour:
   m_Name: TimelineEventClip
   m_EditorClassIdentifier: 
   template:
-    ClipStartTime: 0
-    ClipEndTime: 0
     HandlerKey: Tantawowa.Demo.DemoScripts.UIManager.ChangeUI
     IsMethodWithParam: 1
     InvokeEventsInEditMode: 1
@@ -304,7 +282,7 @@ MonoBehaviour:
     m_PreExtrapolationMode: 0
     m_PostExtrapolationTime: 0
     m_PreExtrapolationTime: 0
-    m_DisplayName: RESET SCORE
+    m_DisplayName: RUN CODE!
     m_Version: 1
   - m_Start: 7.25
     m_ClipIn: 0
@@ -800,8 +778,6 @@ MonoBehaviour:
   m_Name: TimelineEventClip
   m_EditorClassIdentifier: 
   template:
-    ClipStartTime: 0
-    ClipEndTime: 0
     HandlerKey: Tantawowa.Demo.DemoScripts.Robot.ResetScore
     IsMethodWithParam: 0
     InvokeEventsInEditMode: 1
@@ -819,8 +795,6 @@ MonoBehaviour:
   m_Name: TimelineEventClip
   m_EditorClassIdentifier: 
   template:
-    ClipStartTime: 0
-    ClipEndTime: 0
     HandlerKey: 
     IsMethodWithParam: 0
     InvokeEventsInEditMode: 0
@@ -1146,8 +1120,6 @@ MonoBehaviour:
   m_Name: TimelineEventClip
   m_EditorClassIdentifier: 
   template:
-    ClipStartTime: 0
-    ClipEndTime: 0
     HandlerKey: Tantawowa.Demo.DemoScripts.Robot.SetState
     IsMethodWithParam: 1
     InvokeEventsInEditMode: 0
@@ -1165,8 +1137,6 @@ MonoBehaviour:
   m_Name: TimelineEventClip
   m_EditorClassIdentifier: 
   template:
-    ClipStartTime: 0
-    ClipEndTime: 0
     HandlerKey: Tantawowa.Demo.DemoScripts.Robot.SetState
     IsMethodWithParam: 1
     InvokeEventsInEditMode: 0
@@ -1184,8 +1154,6 @@ MonoBehaviour:
   m_Name: TimelineEventClip
   m_EditorClassIdentifier: 
   template:
-    ClipStartTime: 0
-    ClipEndTime: 0
     HandlerKey: Tantawowa.Demo.DemoScripts.Robot.AddScore
     IsMethodWithParam: 1
     InvokeEventsInEditMode: 1
@@ -1203,8 +1171,6 @@ MonoBehaviour:
   m_Name: TimelineEventClip
   m_EditorClassIdentifier: 
   template:
-    ClipStartTime: 0
-    ClipEndTime: 0
     HandlerKey: Tantawowa.Demo.DemoScripts.UIManager.ChangeUI
     IsMethodWithParam: 1
     InvokeEventsInEditMode: 1
@@ -1222,8 +1188,6 @@ MonoBehaviour:
   m_Name: TimelineEventClip
   m_EditorClassIdentifier: 
   template:
-    ClipStartTime: 0
-    ClipEndTime: 0
     HandlerKey: Tantawowa.Demo.DemoScripts.Robot.AddScore
     IsMethodWithParam: 1
     InvokeEventsInEditMode: 1
@@ -1241,8 +1205,6 @@ MonoBehaviour:
   m_Name: TimelineEventClip
   m_EditorClassIdentifier: 
   template:
-    ClipStartTime: 0
-    ClipEndTime: 0
     HandlerKey: Tantawowa.Demo.DemoScripts.Robot.AddScore
     IsMethodWithParam: 1
     InvokeEventsInEditMode: 1
@@ -1260,8 +1222,6 @@ MonoBehaviour:
   m_Name: TimelineEventClip
   m_EditorClassIdentifier: 
   template:
-    ClipStartTime: 0
-    ClipEndTime: 0
     HandlerKey: Tantawowa.Demo.DemoScripts.Robot.AddScore
     IsMethodWithParam: 1
     InvokeEventsInEditMode: 1
