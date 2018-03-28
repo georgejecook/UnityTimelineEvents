@@ -10,16 +10,6 @@ namespace Tantawowa.TimelineEvents
     public class TimelineEventBehaviour : PlayableBehaviour
     {
         /// <summary>
-        /// Time clip starts
-        /// </summary>
-        public float ClipStartTime;
-
-        /// <summary>
-        /// Time clip ends
-        /// </summary>
-        public float ClipEndTime;
-
-        /// <summary>
         /// Key for the current event handler - used to track changes 
         /// </summary>
         public string HandlerKey;

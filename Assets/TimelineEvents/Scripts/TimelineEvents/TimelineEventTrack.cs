@@ -21,8 +21,6 @@ namespace Tantawowa.TimelineEvents
                 if (playableAsset)
                 {
                     playableAsset.TrackTargetObject = trackTargetObject;
-                    playableAsset.ClipStartTime = (float) clip.start;
-                    playableAsset.ClipEndTime = (float) clip.end;
                 }
             }
 

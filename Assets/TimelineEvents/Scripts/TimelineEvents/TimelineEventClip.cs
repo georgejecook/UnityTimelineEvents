@@ -11,9 +11,6 @@ namespace Tantawowa.TimelineEvents
         public TimelineEventBehaviour template = new TimelineEventBehaviour();
         public GameObject TrackTargetObject { get; set; }
         
-        public float ClipStartTime { get; set; }
-        public float ClipEndTime { get; set; }
-        
         public ClipCaps clipCaps
         {
             get { return ClipCaps.None; }
@@ -24,8 +21,6 @@ namespace Tantawowa.TimelineEvents
             var playable = ScriptPlayable<TimelineEventBehaviour>.Create(graph, template);
             TimelineEventBehaviour clone = playable.GetBehaviour();
             clone.TargetObject = TrackTargetObject;
-            clone.ClipStartTime = ClipStartTime;
-            clone.ClipEndTime = ClipEndTime;
             return playable;
         }
     }

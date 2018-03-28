@@ -52,7 +52,7 @@ namespace Tantawowa.TimelineEvents.Editor
                 EditorGUILayout.Toggle("Method with param?", isMethodWithParamProperty.boolValue);
 
 
-            selectedMethod = AddMethodsPopup("At Clip Start", handlerKeyProperty,
+            selectedMethod = AddMethodsPopup("Method", handlerKeyProperty,
                 clip.TrackTargetObject,
                 isMethodWithParamProperty.boolValue);
 
