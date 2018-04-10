@@ -2,6 +2,7 @@ using System;
 using System.Linq;
 using System.Reflection;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Playables;
 
 namespace Tantawowa.TimelineEvents
@@ -30,6 +31,8 @@ namespace Tantawowa.TimelineEvents
         /// value of the argument to use - it's serialized to and from string
         /// </summary>
         public string ArgValue;
+
+        public TimelineEventClip clip;
 
         private EventInvocationInfo invocationInfo;
 
@@ -80,7 +83,9 @@ namespace Tantawowa.TimelineEvents
                     .GetMethods(BindingFlags.Public | BindingFlags.DeclaredOnly | BindingFlags.Instance)
                     .FirstOrDefault(m => m.Name == methodName && m.ReturnType == typeof(void) &&
                                          m.GetParameters().Length == (methodWitharg ? 1 : 0));
-                return new EventInvocationInfo(methodKey, targetBehaviour, methodInfo);
+
+                var unityEvent = TimelineEventProxy.Instance.EventForClip(clip);
+                return new EventInvocationInfo(methodKey, targetBehaviour, methodInfo, unityEvent);
             }
 
             return null;

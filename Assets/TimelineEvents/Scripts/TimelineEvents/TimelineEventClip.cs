@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Playables;
 using UnityEngine.Timeline;
 
@@ -21,6 +22,11 @@ namespace Tantawowa.TimelineEvents
             var playable = ScriptPlayable<TimelineEventBehaviour>.Create(graph, template);
             TimelineEventBehaviour clone = playable.GetBehaviour();
             clone.TargetObject = TrackTargetObject;
+
+            clone.clip = this;
+
+            TimelineEventProxy.Instance.EventForClip(this);
+
             return playable;
         }
     }

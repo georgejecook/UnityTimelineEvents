@@ -7,6 +7,7 @@ using System.Text.RegularExpressions;
 using Tantawowa.Extensions;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Tantawowa.TimelineEvents.Editor
 {
@@ -80,6 +81,17 @@ namespace Tantawowa.TimelineEvents.Editor
 
             invokeEventsInEditModeProperty.boolValue = EditorGUILayout.Toggle("Invoke in Edit Mode",
                 invokeEventsInEditModeProperty.boolValue);
+
+            EditorGUILayout.Space();
+
+            var proxy = new SerializedObject(TimelineEventProxy.Instance);
+            proxy.Update();
+            int index = TimelineEventProxy.Instance.IndexOfClip(clip);
+            SerializedProperty unityEvent = proxy.FindProperty("events").GetArrayElementAtIndex(index);
+
+            EditorGUILayout.PropertyField(unityEvent, new GUIContent("Unity Event"));
+            proxy.ApplyModifiedProperties();        
+        
         }
 
         private MethodInfo AddMethodsPopup(string label, SerializedProperty property, GameObject gameObject,

@@ -3,6 +3,7 @@ using System.Linq;
 using System.Reflection;
 using Tantawowa.Extensions;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Tantawowa.TimelineEvents
 {
@@ -11,18 +12,19 @@ namespace Tantawowa.TimelineEvents
         public Behaviour TargetBehaviour;
         public MethodInfo MethodInfo;
         public static Type[] SupportedTypes = {typeof(string), typeof(float), typeof(int), typeof(bool)};
-
+        public UnityEvent unityEvent;
         //used for tracking
         public string Key;
 
-        public EventInvocationInfo(string key, Behaviour targetBehaviour, MethodInfo methodInfo)
+        public EventInvocationInfo(string key, Behaviour targetBehaviour, MethodInfo methodInfo, UnityEvent unityEvent)
         {
             Key = key;
             MethodInfo = methodInfo;
             TargetBehaviour = targetBehaviour;
+            this.unityEvent = unityEvent;
         }
 
-        public void Invoke(object value)
+        private void Invoke(object value)
         {
             if (MethodInfo != null)
             {
@@ -30,7 +32,7 @@ namespace Tantawowa.TimelineEvents
             }
         }
 
-        public void InvokEnum(int value)
+        private void InvokEnum(int value)
         {
             var type = MethodInfo.GetParameters()[0].ParameterType;
             var enumValue = Enum.ToObject(type, value);
@@ -38,9 +40,9 @@ namespace Tantawowa.TimelineEvents
             {
                 MethodInfo.Invoke(TargetBehaviour, new[] {enumValue});
             }
-        }
+       }
 
-        public void InvokeNoArgs()
+        private void InvokeNoArgs()
         {
             if (MethodInfo != null)
             {
@@ -52,6 +54,11 @@ namespace Tantawowa.TimelineEvents
         {
             try
             {
+                if (unityEvent != null)
+                {
+                    unityEvent.Invoke();
+                }
+
                 if (isSingleArg)
                 {
                     var paramType = MethodInfo.GetParameters()[0].ParameterType;
