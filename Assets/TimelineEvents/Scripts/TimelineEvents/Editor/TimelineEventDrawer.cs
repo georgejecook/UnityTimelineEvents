@@ -90,12 +90,12 @@ namespace Tantawowa.TimelineEvents.Editor
                 return null;
             }
 
-            MonoBehaviour[] behaviours = gameObject.GetComponents<MonoBehaviour>();
+            Behaviour[] behaviours = gameObject.GetComponents<Behaviour>();
 
             var allMethods = behaviours.SelectMany(
                     x => x.GetType()
-                        .GetMethods(BindingFlags.Public | BindingFlags.DeclaredOnly | BindingFlags.Instance))
-                .Where(
+                        .GetMethods(BindingFlags.Public | BindingFlags.Instance))
+				.Where(
                     x =>
                     {
                         if (listSingleArgMethods)
