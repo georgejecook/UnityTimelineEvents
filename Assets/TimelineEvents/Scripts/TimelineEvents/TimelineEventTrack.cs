@@ -20,7 +20,10 @@ namespace Tantawowa.TimelineEvents
 
                 if (playableAsset)
                 {
-                    playableAsset.TrackTargetObject = trackTargetObject;
+					if (trackTargetObject)
+					{
+						playableAsset.TrackTargetObject = trackTargetObject;
+					}
                 }
             }
 

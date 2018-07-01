@@ -35,11 +35,16 @@ namespace Tantawowa.TimelineEvents
 
         public override void OnBehaviourPlay(Playable playable, FrameData info)
         {
-            UpdateDelegates();
-            if (invocationInfo != null)
-            {
-                invocationInfo.Invoke(IsMethodWithParam, ArgValue);
-            }
+			// Only invoke if time has passed to avoid invoking
+			// repeatedly after resume
+			if ((info.frameId == 0) || (info.deltaTime > 0))
+			{
+				UpdateDelegates();
+				if (invocationInfo != null)
+				{
+					invocationInfo.Invoke(IsMethodWithParam, ArgValue);
+				}
+			}
         }
         
         private void UpdateDelegates()
@@ -77,8 +82,8 @@ namespace Tantawowa.TimelineEvents
                 //get the method info
                 var methodInfo = targetBehaviour
                     .GetType()
-                    .GetMethods(BindingFlags.Public | BindingFlags.DeclaredOnly | BindingFlags.Instance)
-                    .FirstOrDefault(m => m.Name == methodName && m.ReturnType == typeof(void) &&
+                    .GetMethods(BindingFlags.Public | BindingFlags.Instance)
+					.FirstOrDefault(m => m.Name == methodName && m.ReturnType == typeof(void) &&
                                          m.GetParameters().Length == (methodWitharg ? 1 : 0));
                 return new EventInvocationInfo(methodKey, targetBehaviour, methodInfo);
             }
@@ -122,7 +127,7 @@ namespace Tantawowa.TimelineEvents
                     throw new Exception("No target set for key " + key);
                 }
 
-                foreach (var behaviour in TargetObject.GetComponents<MonoBehaviour>())
+                foreach (var behaviour in TargetObject.GetComponents<Behaviour>())
                 {
                     if (typeName == behaviour.GetType().ToString())
                     {
