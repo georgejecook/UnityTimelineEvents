@@ -6,3 +6,5 @@ Thanks to Marius George from https://twitter.com/infingame  who got me started w
 More info coming soon. Check out the video here:
 
 https://youtu.be/17YU2nzpR5g
+
+Unity Asset Store Link: https://assetstore.unity.com/packages/3d/characters/timeline-events-115300
